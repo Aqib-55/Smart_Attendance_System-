@@ -1,73 +1,63 @@
-Smart Attendance System
+# Smart Attendance System
 
-Project Overview
-The Smart Attendance System is a facial recognition-based attendance management system. This project aims to automate the attendance process by recognizing faces through a camera and marking attendance in an Excel sheet with the identified name.
+## Overview
+The Smart Attendance System is a Python-based project that uses face recognition technology to automate the process of marking attendance. This system detects and recognizes faces using a webcam and records attendance directly into an Excel file with timestamps.
 
-Key Components:
+## Features
+- **Real-time Face Detection and Recognition**
+- **Automatic Attendance Marking in Excel**
+- **Duplicate Entry Prevention**
+- **Simple Dataset Management**
+- **Face Detection Before Attendance Process Begins**
 
-1.	Real-Time Face Detection:
+## Project Structure
+```
+SMART_ATTENDANCE/
+│
+├── data_set/                            # Folder to store student images
+│   ├── Aqib Raza.jpg
+│   ├── Shah Rukh Khan.jpg
+│   └── Emraan Hashmi.jpg
+│
+├── Attendance_sheet/                    # Folder for attendance Excel sheet
+│   └── attendance.xlsx
+│
+└── source_code.py                       # Main source code for the project
+```
 
-o	The system utilizes a webcam or any connected camera to capture live video feed.
+## Requirements
+- Python 3.x
+- OpenCV
+- face_recognition
+- numpy
+- openpyxl
 
-o	It detects faces in real-time, ensuring that the system is responsive and efficient.
+Install the required dependencies using the following command:
+```
+pip install opencv-python face_recognition numpy openpyxl
+```
 
+## How to Run
+1. Ensure the student dataset is placed inside `D:\SMART_ATTENDANCE\data_set`.
+2. Run the project by executing the following command:
+```
+python source_code.py
+```
+3. The webcam will activate and wait until a face is detected. Once detected, the system will begin recognizing and marking attendance.
+4. Press 'q' to quit the application.
 
-2.	Face Recognition:
+## How it Works
+1. The system loads known faces from the `data_set` folder.
+2. It uses a webcam to capture real-time video.
+3. Once a face is detected, the system matches it with the dataset and logs the entry into `attendance.xlsx` under the `Attendance_sheet` directory.
+4. Duplicate entries for the same day are ignored.
 
-o	Recognizes and identifies individuals from the captured video feed.
+## Notes
+- Ensure that the Excel file is closed during attendance marking to avoid file write errors.
+- Add more students by placing labeled images in the `data_set` folder.
+- For better recognition, ensure that the images in the dataset are clear and of high quality.
 
-
-o	Uses pre-trained machine learning models to ensure high accuracy in face identification.
-
-
-o	Matches detected faces against a registered database of faces.
-
-
-
-3.	Attendance Recording:
-
-o	Automatically marks attendance for recognized faces.
-
-
-o	Each attendance record is time-stamped, providing a clear log of when each individual was present.
-
-
-o	Records are stored in an Excel file (attendance.xlsx), which is easily accessible and manageable.
-
-
-
-4.	User Interface:
-
-o	A user-friendly interface built using Python's Tkinter library.
-
-
-o	Allows for easy interaction with the system, including the ability to add new faces to the database, view attendance records, and manage system settings.
-
-
-Benefits:
-
-•	Efficiency: Significantly reduces the time required to take attendance, especially in large groups or classrooms.
-
-
-•	Accuracy: Minimizes human errors and ensures that attendance records are precise.
-
-
-•	Security: Prevents fraudulent attendance practices such as proxy attendance.
-
-
-•	Convenience: Provides an automated and hassle-free way of managing attendance, with records stored in a widely-used format (Excel).
-
-
-
-Use Cases:
-
-
-•	Educational Institutions: Automate attendance in schools, colleges, and universities.
+## Contribution
+Feel free to contribute by improving the recognition accuracy or adding new features. Fork the repository and create pull requests for your enhancements.
 
 
-•	Workplaces: Track employee attendance in offices and corporate settings.
-
-
-•	Events and Conferences: Manage attendance for participants in seminars, workshops, and conferences.
-
-•	Access Control: Use as part of a larger access control system to monitor and record entry/exit times.
