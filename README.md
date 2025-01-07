@@ -61,3 +61,11 @@ python source_code.py
 Feel free to contribute by improving the recognition accuracy or adding new features. Fork the repository and create pull requests for your enhancements.
 
 
+![photo_2025-01-07_18-28-29](https://github.com/user-attachments/assets/64ced0ae-0bab-4aaa-a46f-bdd4a8290f99)
+
+![photo_2025-01-07_18-01-50](https://github.com/user-attachments/assets/a9631125-0638-4607-aa7f-50e583c36c5f)
+
+![photo_2025-01-07_18-29-20](https://github.com/user-attachments/assets/d40ef294-e844-41d4-9192-013e6807622d)
+
+
+
